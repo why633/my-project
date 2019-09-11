@@ -1,0 +1,44 @@
+.nav{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: #333333;
+}
+.width{
+  width: 1080px;
+  margin: 0 auto;
+}
+.nav-wrap{
+  float: left;
+}
+.logo{
+  float: left;
+  width: 200px;
+  height: 80px;
+  background: pink;
+}
+.tab{
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 20px;
+}
+.active{
+  color: #C81623;
+}
+.tab:link{
+    text-decoration:none;
+     /* 指正常的未被访问过的链接*/
+}
+.tab:visited{
+    text-decoration:none;
+     /*指已经访问过的链接*/
+}
+.tab:hover{
+     text-decoration:none;
+     color: #C81623;
+     /*指鼠标在链接*/
+}
+.tab:active{
+    text-decoration:none;
+    /* 指正在点的链接*/
+}
