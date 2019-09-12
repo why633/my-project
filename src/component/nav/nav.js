@@ -11,6 +11,7 @@ const NavBar = () => (
         <NavLink to='/Note' className="tab" activeClassName='active'>笔记</NavLink>
         <NavLink to='/Travel' className="tab" activeClassName='active'>在路上</NavLink>
         <NavLink to='/Others' className="tab" activeClassName='active'>其他</NavLink>
+        <NavLink to='/404' className="tab" activeClassName='active'>404</NavLink>
       </div>
     </div>
   </div>
