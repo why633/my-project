@@ -1,5 +1,4 @@
 import React from 'react'
-import { addToCart, updateCart, deleteFromCart } from '../../redux/actions'
 export default class HomePage extends React.Component {
   render () {
     // const creatStore = function (reducer, initState) {

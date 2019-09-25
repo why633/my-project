@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f9f9f9;
+  background: hsl(0, 0%, 98%);
 }
 
 code {
@@ -13,9 +13,6 @@ code {
     monospace;
 }
 
-.root {
-  padding-top: 80px;
-}
 
 .left-wrap {
   width: 300px;
@@ -25,4 +22,11 @@ code {
   left: 30px;
   top: 50%;
   margin-top: -250px;
+}
+.layout .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
 }

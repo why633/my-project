@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "antd/dist/antd.css";
 import Root from './router';
 import * as serviceWorker from './serviceWorker';
 import createdStore from './redux/store'
-import { addToCart, updateCart, deleteFromCart } from './redux/actions'
+// import { addToCart, updateCart, deleteFromCart } from './redux/actions'
 import { Provider } from 'react-redux';
 
 const store = createdStore
