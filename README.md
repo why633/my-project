@@ -1,45 +1,9 @@
-# é¡¹ç›®æ­å»º
-
-``` bash
-  #å®‰è£…è„šæ‰‹æ¶
-  npm install -g create-react-app
-
-  #è‡ªåŠ¨åˆ›å»ºåä¸º my-app çš„é¡¹ç›®
-  create-react-app my-app
-
-  #è¿›å…¥é¡¹ç›®ç›®å½•
-  cd my-app
-
-  #å¯åŠ¨é¡¹ç›®
-  npm start
-```
-# é¡¹ç›®é…ç½®
-## å®‰è£…ä¾èµ– (npm/cnpm install XXX --save)
-  * antd-mobile ï¼ˆç§»åŠ¨ç«¯UIæ ·å¼åº“ï¼‰
-  * react-router-dom/react-router-config   ï¼ˆrouterç›¸å…³ï¼‰
-    - react-router-config é…ç½®æ’ä»¶
-  * react-redux/redux/redux-thunk ï¼ˆreduxç›¸å…³ï¼‰
-    - redux-thunk reduxå¼‚æ­¥ä¸­é—´ä»¶
-  * @babel/plugin-proposal-decorators/babel-plugin-import ï¼ˆbabelè½¬æ¢ç›¸å…³ï¼‰
-  * react-app-rewired/customize-cra ï¼ˆconfig-overridesè¦†ç›–é…ç½®æ’ä»¶ï¼‰
-  
-## è¦†å†™é»˜è®¤é…ç½®
-  * æ–°å»º config-overrides.js é…ç½®
-  * ä¿®æ”¹ packge.json -> scripts
-<pre>
-"scripts": {
-  "start": "react-app-rewired start",
-  "build": "react-app-rewired build",
-  "test": "react-app-rewired test",
-  "eject": "react-scripts eject"
-}</pre>
-
-## reduxé…ç½®
-  - redux
-    - app.redux.js
-    - reducer.js
-
-## è·¯ç”±é…ç½®
-  - router
-    - index.js
-  
+Ç°¶Ë¶ÔÓ¦ÈËÔ±
+Ğ­Òé¹ÜÀí
+	¿ªÖ¤µ¥¾İ   Íõº£Ñó
+	Ñº»ãµ¥¾İ   ÁõÊ¯»ª
+	µæË°µ¥¾İ   ÁõÊ¯»ª
+Ğ­Òé¶©µ¥¹ÜÀí
+	Ìá³µ½áËã   èïºÍÎ°
+	Éú³É½áËãµ¥ èïºÍÎ°
+	½áËãµ¥ÏêÇé ÁõÊ¯»ª

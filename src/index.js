@@ -5,7 +5,6 @@ import "antd/dist/antd.css";
 import Root from './router';
 import * as serviceWorker from './serviceWorker';
 import createdStore from './redux/store'
-// import { addToCart, updateCart, deleteFromCart } from './redux/actions'
 import { Provider } from 'react-redux';
 
 const store = createdStore
@@ -13,16 +12,6 @@ const store = createdStore
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())
 );
-
-// store.dispatch(addToCart('Coffee 500gm', 1, 250));
-// store.dispatch(addToCart('Flour 1kg', 2, 110));
-// store.dispatch(addToCart('Juice 2L', 1, 250));
-
-// // Update Cart
-// store.dispatch(updateCart('Flour 1kg', 5, 110));
-
-// // Delete from Cart
-// store.dispatch(deleteFromCart('Coffee 500gm'));
 
 unsubscribe();
 ReactDOM.render(
