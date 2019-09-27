@@ -16,7 +16,7 @@ function Root () {
     <Router>
       <div className="root">
         <Layout className="layout">
-          <Header><div className="logo" /><Nav /></Header>
+          <Header><div className="logo"><img src={require('@/assets/logo.png')} alt=""/></div><Nav /></Header>
           <Content style={{ padding: '0 50px' }}>
             <Breadcrumb />
             <div style={{ background: '#fff', minHeight: 'calc(100vh - 173px' }}>

@@ -1,9 +1,18 @@
-Ç°¶Ë¶ÔÓ¦ÈËÔ±
-Ğ­Òé¹ÜÀí
-	¿ªÖ¤µ¥¾İ   Íõº£Ñó
-	Ñº»ãµ¥¾İ   ÁõÊ¯»ª
-	µæË°µ¥¾İ   ÁõÊ¯»ª
-Ğ­Òé¶©µ¥¹ÜÀí
-	Ìá³µ½áËã   èïºÍÎ°
-	Éú³É½áËãµ¥ èïºÍÎ°
-	½áËãµ¥ÏêÇé ÁõÊ¯»ª
+# Node + MongoDB
+## å‡†å¤‡
+### 1ã€å®‰è£…express
+```bash
+cnpm intsall express --save
+```
+### 2ã€å®‰è£…nodemonï¼Œç›‘å¬è·¯ç”±å’Œå“åº”å†…å®¹å¯è‡ªåŠ¨é‡å¯æœåŠ¡
+```bash
+cnpm install -g nodemon
+```
+### 3ã€å®‰è£…mongooseï¼Œç”¨äºè¿æ¥mongodb
+```bash
+cnpm install mongoose --save
+```
+### 4ã€å®‰è£…body-parserï¼Œæ”¯æŒpostè¯·æ±‚
+```bash
+cnpm install body-parser --save
+```
