@@ -13,7 +13,6 @@ for (let i = 0; i < 23; i++) {
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   });
 }
-
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }} />
@@ -21,7 +20,55 @@ const IconText = ({ type, text }) => (
   </span>
 );
 
+const getArticles = () => {
+  fetch('http://192.168.88.111:9000/article/getArticle', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    mode: 'cors',
+    cache: 'no-cache'
+  }).then(res => {
+    return res.json();
+  }).then(function (data) {
+    console.log(data);
+  }).catch(function (e) {
+    console.log('error' + e);
+  });
+}
+
+const addArticle = () => {
+  const data = {
+    title: 'myAddArticle',
+    avatar: 'why',
+    description: '通过添加生成的数据通过添加生成的数据通过添加生成的数据通过添加生成的数据',
+    content: '通过添加生成的数据通过添加生成的数据通过添加生成的数据通过添加生成的数据',
+    articleImage: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+  }
+  fetch('http://192.168.88.111:9000/article/addArticle', {
+    body: JSON.stringify(data), // must match 'Content-Type' header
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, same-origin, *omit
+    headers: {
+      'user-agent': 'Mozilla/4.0 MDN Example',
+      'content-type': 'application/json'
+    },
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, cors, *same-origin
+    redirect: 'follow', // manual, *follow, error
+    referrer: 'no-referrer', // *client, no-referrer
+  }).then(response => {
+    return response.json() // parses response to JSON
+  }).then(res => {
+    console.log(res)
+  })
+}
+
 class Travel extends React.Component {
+  componentDidMount () {
+    getArticles()
+    // addArticle()
+  }
   render () {
     return (
       <div className="travel">
