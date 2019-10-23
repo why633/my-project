@@ -2,30 +2,10 @@ const express = require('express');
 const Router = express.Router();
 const Article = require('../models/articleList');
 
-
+const MongoConnect = require('../mongoosedb')
+console.log(MongoConnect)
 // 导入mongoose 模块
 const mongoose = require('mongoose');
-
-/**
-  * 连接成功
-  */
-mongoose.connection.on('connected', function () {
-  console.log('Mongoose connection succuss');
-});
-
-/**
- * 连接异常
- */
-mongoose.connection.on('error', function (err) {
-  console.log('Mongoose connection error: ' + err);
-});
-
-/**
- * 连接断开
- */
-mongoose.connection.on('disconnected', function () {
-  console.log('Mongoose connection disconnected');
-});
 
 Router.get('/', (req, res, next) => {
   // res.render('index', {
@@ -36,12 +16,8 @@ Router.get('/', (req, res, next) => {
 // 获取全部的Article
 Router.get('/getArticle', (req, response) => {
   console.log('getArticle')
-  mongoose.connect('mongodb://127.0.0.1:27017/myDB1', { useNewUrlParser: true }, (err) => {
-    if (err) {
-      console.log("连接数据库失败");
-      return;
-    }
-    console.log('连接数据库成功')
+  MongoConnect('mongodb://127.0.0.1:27017/myDB1').then(mongoRes => {
+    console.log('mongoRes-----'+ mongoRes)
     Article.find({}, (e, res) => {
       if (e) {
         console.err(e)
@@ -63,28 +39,7 @@ Router.get('/getArticle', (req, response) => {
         )
       }
     })
-  });
-  // Article.find((e, res) => {
-  //   if (e) {
-  //     console.err(e)
-  //     // res.json(
-  //     //   {
-  //     //     code: -1,
-  //     //     massage: '请求失败',
-  //     //     data: []
-  //     //   }
-  //     // )
-  //   } else {
-  //     console.log('find all cats suc: There have ' + res)
-  //     // res.json(
-  //     //   {
-  //     //     code: 200,
-  //     //     massage: '请求成功',
-  //     //     data: res
-  //     //   }
-  //     // )
-  //   }
-  // })
+  })
 
 });
 Router.post('/addArticle', (req, res) => {
