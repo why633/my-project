@@ -12,6 +12,10 @@ cnpm install -g nodemon
 ```bash
 cnpm install mongoose --save
 ```
+#### 本地安装mongodb
+  1.下载mongodb进行安装
+  2.启动mongodb bin->mongod.exe
+
 ### 4、安装body-parser，支持post请求
 ```bash
 cnpm install body-parser --save
