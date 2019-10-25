@@ -2,6 +2,8 @@ const express = require('express');
 const Router = express.Router();
 const Article = require('../models/articleList');
 
+const Mongo = require('../mongo')
+
 const MongoConnect = require('../mongoosedb')
 console.log(MongoConnect)
 // 导入mongoose 模块
@@ -16,29 +18,17 @@ Router.get('/', (req, res, next) => {
 // 获取全部的Article
 Router.get('/getArticle', (req, response) => {
   console.log('getArticle')
-  MongoConnect('mongodb://127.0.0.1:27017/myDB1').then(mongoRes => {
-    console.log('mongoRes-----'+ mongoRes)
-    Article.find({}, (e, res) => {
-      if (e) {
-        console.err(e)
-        response.json(
-          {
-            code: -1,
-            massage: '请求失败',
-            data: []
-          }
-        )
-      } else {
-        console.log('find all cats suc: There have ' + res)
-        response.json(
-          {
-            code: 200,
-            massage: '请求成功',
-            data: res
-          }
-        )
+
+  Mongo.getInstance('myDB1')
+  const mongo = new Mongo()
+  mongo.findInTable(Article).then(res => {
+    response.json(
+      {
+        code: 200,
+        massage: '请求成功',
+        data: res.data
       }
-    })
+    )
   })
 
 });

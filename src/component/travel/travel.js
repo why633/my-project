@@ -1,7 +1,8 @@
 import './travel.scss'
 import React from 'react'
-import { List, Avatar, Icon } from 'antd';
+import { List, Avatar, Icon } from 'antd'
 import { articles } from '@/api/travel'
+
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }} />
